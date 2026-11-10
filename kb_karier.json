@@ -1,0 +1,206 @@
+{
+  "judul": "KarirKu: Sistem Pakar Rekomendasi Bidang Karier Berdasarkan Minat dan Kemampuan Menggunakan Metode Forward Chaining",
+  "sasaran": "Temukan bidang karier yang cocok dengan minat dan kemampuanmu.",
+  "batas": "Aturan berasal dari O*NET OnLine (Departemen Tenaga Kerja AS, konteks pasar kerja AS) dan dua jurnal sistem pakar karier Indonesia (2019 dan 2025). Sistem hanya memetakan enam rumpun minat Holland (RIASEC) dan enam kelompok kemampuan, dari jawaban ya/tidak. Hasilnya saran awal untuk eksplorasi, bukan keputusan akhir, dan tidak menggantikan konseling karier atau tes psikologi baku. Sistem tidak mempertimbangkan pendidikan, kondisi ekonomi, atau pasar kerja Indonesia.",
+  "sumber": {
+    "S1": "Browse by Career Interest Types (1.B.1), O*NET OnLine, U.S. Department of Labor, Employment and Training Administration, https://www.onetonline.org/find/descriptor/browse/1.B.1, diakses 10 Nov 2026",
+    "S2": "Browse by Transferable Skills (2.B), O*NET OnLine, U.S. Department of Labor, Employment and Training Administration, https://www.onetonline.org/find/descriptor/browse/2.B, diakses 10 Nov 2026",
+    "S3": "Browse by Essential Skills (2.A), O*NET OnLine, U.S. Department of Labor, Employment and Training Administration, https://www.onetonline.org/find/descriptor/browse/2.A, diakses 10 Nov 2026",
+    "S4": "Rianto, V. Y. & Wulandari, S. (2025). Aplikasi Tes Minat Bakat dan Perencanaan Karier Menggunakan Adaptasi Teori RIASEC Berbasis Forward Chaining. TIN: Terapan Informatika Nusantara, 6(7), 1092-1104, https://doi.org/10.47065/tin.v6i7.8544, diakses 10 Nov 2026",
+    "S5": "Fatmasari & Supriyatna, A. (2019). Pemilihan dan Pengembangan Karier Berdasarkan Minat, Bakat dan Kepribadian Remaja Menggunakan Forward Chaining. JUITA, VII(1), 33-42, p-ISSN 2086-9398, e-ISSN 2579-9801, diakses 10 Nov 2026 (berkas PDF jurnal)"
+  },
+  "bagian": [
+    {
+      "judul": "A. Minat (setujukah Anda dengan pernyataan berikut?)",
+      "fakta": [
+        "i_r1",
+        "i_r2",
+        "i_r3",
+        "i_i1",
+        "i_i2",
+        "i_i3",
+        "i_a1",
+        "i_a2",
+        "i_a3",
+        "i_s1",
+        "i_s2",
+        "i_s3",
+        "i_e1",
+        "i_e2",
+        "i_e3",
+        "i_c1",
+        "i_c2",
+        "i_c3"
+      ]
+    },
+    {
+      "judul": "B. Kemampuan (apakah pernyataan berikut benar untuk Anda?)",
+      "fakta": [
+        "k_r1",
+        "k_r2",
+        "k_i1",
+        "k_i2",
+        "k_a1",
+        "k_a2",
+        "k_s1",
+        "k_s2",
+        "k_e1",
+        "k_e2",
+        "k_c1",
+        "k_c2"
+      ]
+    }
+  ],
+  "fakta": {
+    "i_r1": "Saya senang memperbaiki, merakit, atau membangun sesuatu dengan tangan",
+    "i_r2": "Saya suka bekerja di luar ruangan atau melakukan aktivitas fisik",
+    "i_r3": "Saya tertarik pada mesin, listrik/elektronik, atau konstruksi",
+    "i_i1": "Saya suka meneliti cara kerja sesuatu, baik benda, makhluk hidup, maupun perilaku manusia",
+    "i_i2": "Saya senang memecahkan soal logika, teka-teki, atau masalah matematika",
+    "i_i3": "Saya tertarik pada sains atau teknologi informasi",
+    "i_a1": "Saya senang membuat karya orisinal, misalnya gambar, desain, musik, tulisan, atau video",
+    "i_a2": "Saya lebih nyaman bekerja bebas tanpa aturan yang kaku",
+    "i_a3": "Saya tertarik pada seni pertunjukan, desain visual, atau seni kuliner",
+    "i_s1": "Saya senang membantu orang lain menyelesaikan masalahnya",
+    "i_s2": "Saya suka mengajar atau menjelaskan sesuatu sampai orang lain paham",
+    "i_s3": "Saya nyaman bekerja langsung dengan banyak orang dan melayani kebutuhan mereka",
+    "i_e1": "Saya suka memimpin kelompok untuk mencapai target tertentu",
+    "i_e2": "Saya tertarik pada bisnis: berwirausaha, berjualan, atau memasarkan",
+    "i_e3": "Saya berani mengambil keputusan dan menanggung risikonya",
+    "i_c1": "Saya suka bekerja mengikuti prosedur dan aturan yang jelas",
+    "i_c2": "Saya senang merapikan data, arsip, atau catatan keuangan",
+    "i_c3": "Saya lebih nyaman mengurus rincian dan data daripada gagasan yang abstrak",
+    "k_r1": "Saya mampu memperbaiki mesin atau alat dengan perkakas yang sesuai",
+    "k_r2": "Saya bisa menelusuri penyebab alat atau mesin bermasalah, lalu menentukan langkah perbaikannya",
+    "k_i1": "Saya terbiasa memakai metode ilmiah (data, uji, kesimpulan) untuk menjawab masalah",
+    "k_i2": "Saya mampu memakai matematika untuk menyelesaikan masalah",
+    "k_a1": "Saya mampu mengungkapkan ide lewat tulisan yang efektif bagi pembacanya",
+    "k_a2": "Saya mampu membuat karya visual, musik, atau pertunjukan yang orisinal",
+    "k_s1": "Saya mampu mengajarkan orang lain cara melakukan sesuatu",
+    "k_s2": "Saya mampu mendengarkan dengan penuh perhatian dan memahami maksud orang lain",
+    "k_e1": "Saya mampu membujuk orang lain agar mengubah pendapat atau perilakunya",
+    "k_e2": "Saya mampu mempertemukan pihak yang berbeda pendapat sampai tercapai kesepakatan",
+    "k_c1": "Saya mampu mencatat dan mengelola anggaran atau pengeluaran dengan rapi",
+    "k_c2": "Saya mampu memahami dokumen, aturan, dan prosedur tertulis dengan cepat"
+  },
+  "turunan": {
+    "minat_realistic": "Minat tipe Realistic (R)",
+    "minat_investigative": "Minat tipe Investigative (I)",
+    "minat_artistic": "Minat tipe Artistic (A)",
+    "minat_social": "Minat tipe Social (S)",
+    "minat_enterprising": "Minat tipe Enterprising (E)",
+    "minat_conventional": "Minat tipe Conventional (C)",
+    "kemampuan_realistic": "Kemampuan pendukung tipe Realistic (R)",
+    "kemampuan_investigative": "Kemampuan pendukung tipe Investigative (I)",
+    "kemampuan_artistic": "Kemampuan pendukung tipe Artistic (A)",
+    "kemampuan_social": "Kemampuan pendukung tipe Social (S)",
+    "kemampuan_enterprising": "Kemampuan pendukung tipe Enterprising (E)",
+    "kemampuan_conventional": "Kemampuan pendukung tipe Conventional (C)"
+  },
+  "kesimpulan": {
+    "karier_realistic": {
+      "nama": "Bidang Teknik, Mekanik, dan Pekerjaan Lapangan (tipe Realistic)",
+      "bidang_terkait": "teknik/rekayasa, mekanik dan elektronika, konstruksi, pertukangan kayu, transportasi, pengoperasian mesin, pertanian, layanan hewan, pekerjaan fisik, olahraga, dan keamanan/perlindungan",
+      "tingkat": "cocok"
+    },
+    "karier_investigative": {
+      "nama": "Bidang Sains, Penelitian, dan Teknologi Informasi (tipe Investigative)",
+      "bidang_terkait": "ilmu fisika, hayati, medis, dan sosial; humaniora; matematika/statistika; teknologi informasi; dan layanan kesehatan",
+      "tingkat": "cocok"
+    },
+    "karier_artistic": {
+      "nama": "Bidang Seni, Desain, dan Media Kreatif (tipe Artistic)",
+      "bidang_terkait": "seni rupa, seni terapan dan desain, seni pertunjukan, musik, penulisan kreatif, media, dan seni kuliner",
+      "tingkat": "cocok"
+    },
+    "karier_social": {
+      "nama": "Bidang Pendidikan dan Layanan Sosial (tipe Social)",
+      "bidang_terkait": "layanan sosial, layanan kesehatan, layanan personal, pengajaran/pendidikan, dan kegiatan keagamaan",
+      "tingkat": "cocok"
+    },
+    "karier_enterprising": {
+      "nama": "Bidang Bisnis, Manajemen, dan Kepemimpinan (tipe Enterprising)",
+      "bidang_terkait": "inisiatif bisnis, penjualan, pemasaran/periklanan, keuangan, manajemen/administrasi, penasihat profesional, berbicara di depan umum, politik, dan hukum",
+      "tingkat": "cocok"
+    },
+    "karier_conventional": {
+      "nama": "Bidang Administrasi, Data, dan Keuangan (tipe Conventional)",
+      "bidang_terkait": "pekerjaan kantor, akuntansi, matematika/statistika, teknologi informasi, keuangan, dan sumber daya manusia",
+      "tingkat": "cocok"
+    },
+    "eksplorasi_realistic": {
+      "nama": "Bidang Teknik, Mekanik, dan Pekerjaan Lapangan (tipe Realistic)",
+      "bidang_terkait": "teknik/rekayasa, mekanik dan elektronika, konstruksi, pertukangan kayu, transportasi, pengoperasian mesin, pertanian, layanan hewan, pekerjaan fisik, olahraga, dan keamanan/perlindungan",
+      "tingkat": "eksplorasi",
+      "diganti_oleh": "karier_realistic"
+    },
+    "eksplorasi_investigative": {
+      "nama": "Bidang Sains, Penelitian, dan Teknologi Informasi (tipe Investigative)",
+      "bidang_terkait": "ilmu fisika, hayati, medis, dan sosial; humaniora; matematika/statistika; teknologi informasi; dan layanan kesehatan",
+      "tingkat": "eksplorasi",
+      "diganti_oleh": "karier_investigative"
+    },
+    "eksplorasi_artistic": {
+      "nama": "Bidang Seni, Desain, dan Media Kreatif (tipe Artistic)",
+      "bidang_terkait": "seni rupa, seni terapan dan desain, seni pertunjukan, musik, penulisan kreatif, media, dan seni kuliner",
+      "tingkat": "eksplorasi",
+      "diganti_oleh": "karier_artistic"
+    },
+    "eksplorasi_social": {
+      "nama": "Bidang Pendidikan dan Layanan Sosial (tipe Social)",
+      "bidang_terkait": "layanan sosial, layanan kesehatan, layanan personal, pengajaran/pendidikan, dan kegiatan keagamaan",
+      "tingkat": "eksplorasi",
+      "diganti_oleh": "karier_social"
+    },
+    "eksplorasi_enterprising": {
+      "nama": "Bidang Bisnis, Manajemen, dan Kepemimpinan (tipe Enterprising)",
+      "bidang_terkait": "inisiatif bisnis, penjualan, pemasaran/periklanan, keuangan, manajemen/administrasi, penasihat profesional, berbicara di depan umum, politik, dan hukum",
+      "tingkat": "eksplorasi",
+      "diganti_oleh": "karier_enterprising"
+    },
+    "eksplorasi_conventional": {
+      "nama": "Bidang Administrasi, Data, dan Keuangan (tipe Conventional)",
+      "bidang_terkait": "pekerjaan kantor, akuntansi, matematika/statistika, teknologi informasi, keuangan, dan sumber daya manusia",
+      "tingkat": "eksplorasi",
+      "diganti_oleh": "karier_conventional"
+    }
+  },
+  "aturan": [
+    {"id": "R01", "jika": ["i_r1", "i_r2"], "mode": "dan", "maka": "minat_realistic", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R02", "jika": ["i_r1", "i_r3"], "mode": "dan", "maka": "minat_realistic", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R03", "jika": ["i_r2", "i_r3"], "mode": "dan", "maka": "minat_realistic", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R04", "jika": ["i_i1", "i_i2"], "mode": "dan", "maka": "minat_investigative", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R05", "jika": ["i_i1", "i_i3"], "mode": "dan", "maka": "minat_investigative", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R06", "jika": ["i_i2", "i_i3"], "mode": "dan", "maka": "minat_investigative", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R07", "jika": ["i_a1", "i_a2"], "mode": "dan", "maka": "minat_artistic", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R08", "jika": ["i_a1", "i_a3"], "mode": "dan", "maka": "minat_artistic", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R09", "jika": ["i_a2", "i_a3"], "mode": "dan", "maka": "minat_artistic", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R10", "jika": ["i_s1", "i_s2"], "mode": "dan", "maka": "minat_social", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R11", "jika": ["i_s1", "i_s3"], "mode": "dan", "maka": "minat_social", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R12", "jika": ["i_s2", "i_s3"], "mode": "dan", "maka": "minat_social", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R13", "jika": ["i_e1", "i_e2"], "mode": "dan", "maka": "minat_enterprising", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R14", "jika": ["i_e1", "i_e3"], "mode": "dan", "maka": "minat_enterprising", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R15", "jika": ["i_e2", "i_e3"], "mode": "dan", "maka": "minat_enterprising", "sumber": ["S1", "S4", "S5"]},
+    {"id": "R16", "jika": ["i_c1", "i_c2"], "mode": "dan", "maka": "minat_conventional", "sumber": ["S1", "S5"]},
+    {"id": "R17", "jika": ["i_c1", "i_c3"], "mode": "dan", "maka": "minat_conventional", "sumber": ["S1", "S5"]},
+    {"id": "R18", "jika": ["i_c2", "i_c3"], "mode": "dan", "maka": "minat_conventional", "sumber": ["S1", "S5"]},
+    {"id": "R19", "jika": ["k_r1", "k_r2"], "mode": "atau", "maka": "kemampuan_realistic", "sumber": ["S2"]},
+    {"id": "R20", "jika": ["k_i1", "k_i2"], "mode": "atau", "maka": "kemampuan_investigative", "sumber": ["S3"]},
+    {"id": "R21", "jika": ["k_a1", "k_a2"], "mode": "atau", "maka": "kemampuan_artistic", "sumber": ["S1", "S3"]},
+    {"id": "R22", "jika": ["k_s1", "k_s2"], "mode": "atau", "maka": "kemampuan_social", "sumber": ["S2", "S3"]},
+    {"id": "R23", "jika": ["k_e1", "k_e2"], "mode": "atau", "maka": "kemampuan_enterprising", "sumber": ["S2"]},
+    {"id": "R24", "jika": ["k_c1", "k_c2"], "mode": "atau", "maka": "kemampuan_conventional", "sumber": ["S2", "S3"]},
+    {"id": "R25", "jika": ["minat_realistic", "kemampuan_realistic"], "mode": "dan", "maka": "karier_realistic", "sumber": ["S1"]},
+    {"id": "R26", "jika": ["minat_investigative", "kemampuan_investigative"], "mode": "dan", "maka": "karier_investigative", "sumber": ["S1"]},
+    {"id": "R27", "jika": ["minat_artistic", "kemampuan_artistic"], "mode": "dan", "maka": "karier_artistic", "sumber": ["S1"]},
+    {"id": "R28", "jika": ["minat_social", "kemampuan_social"], "mode": "dan", "maka": "karier_social", "sumber": ["S1"]},
+    {"id": "R29", "jika": ["minat_enterprising", "kemampuan_enterprising"], "mode": "dan", "maka": "karier_enterprising", "sumber": ["S1"]},
+    {"id": "R30", "jika": ["minat_conventional", "kemampuan_conventional"], "mode": "dan", "maka": "karier_conventional", "sumber": ["S1"]},
+    {"id": "R31", "jika": ["minat_realistic"], "mode": "dan", "maka": "eksplorasi_realistic", "sumber": ["S1"]},
+    {"id": "R32", "jika": ["minat_investigative"], "mode": "dan", "maka": "eksplorasi_investigative", "sumber": ["S1"]},
+    {"id": "R33", "jika": ["minat_artistic"], "mode": "dan", "maka": "eksplorasi_artistic", "sumber": ["S1"]},
+    {"id": "R34", "jika": ["minat_social"], "mode": "dan", "maka": "eksplorasi_social", "sumber": ["S1"]},
+    {"id": "R35", "jika": ["minat_enterprising"], "mode": "dan", "maka": "eksplorasi_enterprising", "sumber": ["S1"]},
+    {"id": "R36", "jika": ["minat_conventional"], "mode": "dan", "maka": "eksplorasi_conventional", "sumber": ["S1"]}
+  ]
+}
