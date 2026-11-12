@@ -8,13 +8,22 @@
 
 **Topik:** rekomendasi bidang karier untuk masyarakat umum (pelajar, mahasiswa, pencari kerja, maupun pekerja yang ingin berganti jalur), berdasarkan **minat** dan **kemampuan**. Minat dikelompokkan dengan teori RIASEC Holland (Realistic, Investigative, Artistic, Social, Enterprising, Conventional), sedangkan kemampuan dinilai dari keterampilan kerja yang didefinisikan O*NET. Sistem ini menggunakan metode **Forward Chaining**, yaitu metode penalaran maju yang dimulai dari fakta-fakta yang diketahui (jawaban pengguna), kemudian mencocokkannya dengan aturan IF-THEN dalam basis pengetahuan untuk menghasilkan fakta baru, dan proses ini diulang terus sampai tidak ada aturan baru yang bisa dijalankan sehingga diperoleh kesimpulan akhir.
 
-**Bahasa:** Python 3 (dicoba pada Python 3.13).
+**Bahasa:** Python 3 (dicoba pada Python 3.13). Tidak ada library tambahan, hanya modul bawaan Python:
+
+| Modul | Kegunaan di program |
+|---|---|
+| `json` | membaca file basis aturan `kb_karier.json` (aturan IF-THEN, pernyataan, dan sumber) menjadi data yang bisa diproses program |
+| `argparse` | membaca opsi dari baris perintah, yaitu `--ya` (mode otomatis dengan jawaban ditentukan), `--detail` (menampilkan detail teknis), dan `--kb` (memilih file aturan) |
+| `sys` | menghentikan program dengan pesan error bila ada fakta yang tidak dikenal pada opsi `--ya` |
+| `textwrap` | merapikan teks hasil agar baris panjang terpotong rapi di layar |
 
 **File:**
 
 | File | Isi |
 |---|---|
 | `kb_karier.json` | basis aturan: 36 aturan IF-THEN, 30 pernyataan yang ditanyakan, 5 sumber |
+| `pakar.py` | program: membaca file aturan, bertanya, menjalankan forward chaining, menampilkan kesimpulan dan alasan |
+| `screenshot/` | tangkapan layar kasus uji |
 
 ## 3. Sumber dan tabel aturan
 
@@ -98,9 +107,25 @@ Ada 12 kesimpulan (6 tipe, masing-masing tingkat "cocok" dan "arah eksplorasi");
 
 ## 5. Kasus uji dan screenshot
 
+Semua kasus bisa dijalankan sekaligus dengan `python uji_kasus.py`. Hasil yang diharapkan diperiksa otomatis.
+
+| # | Jawaban "ya" | Kesimpulan | Screenshot |
+|---|---|---|---|
+| 1 | `i_r1, i_r3, k_r1` | Teknik, Mekanik, dan Pekerjaan Lapangan (cocok, hanya satu kemampuan sudah cukup) | ![Kasus 1](screenshot/kasus1_fleksibel_satu_kemampuan.png) |
+| 2 | `i_a1, i_a2` | Seni, Desain, dan Media Kreatif (arah eksplorasi: minat cocok, kemampuan belum terlihat) | ![Kasus 2](screenshot/kasus2_arah_eksplorasi.png) |
+| 3 (negatif) | `i_a1` saja | **tidak ada**: satu pernyataan minat belum cukup membentuk tipe minat | ![Kasus 3](screenshot/kasus3_negatif_satu_minat.png) |
+
+
+Screenshot tambahan `kasus1_detail_teknis.png` ([lihat](screenshot/kasus1_detail_teknis.png)) menunjukkan keluaran dengan opsi `--detail`: siklus forward chaining dan pohon alasan lengkap dengan kode aturan dan sumbernya.
+
+![Detail teknis](screenshot/kasus1_detail_teknis.png)
+
+Screenshot dibuat dari keluaran asli program pada perintah yang tertera di bagian atas tiap gambar.
+
 ## 6. Batas keberlakuan
 
 Pengetahuan dalam sistem ini berasal dari basis data O*NET OnLine milik Departemen Tenaga Kerja Amerika Serikat, sehingga mengikuti konteks pasar kerja Amerika, serta dari dua jurnal sistem pakar karier di Indonesia (2019 dan 2025). Sistem hanya memetakan enam rumpun minat Holland dan enam kelompok kemampuan dari jawaban ya atau tidak. Hasil "arah eksplorasi" hanya berdasarkan minat. Hasilnya cocok sebagai saran awal bagi masyarakat umum untuk mengeksplorasi pilihan karier, bukan keputusan akhir, dan tidak menggantikan konseling karier atau tes psikologi baku. Sistem tidak mempertimbangkan jenjang pendidikan, kondisi ekonomi, minat yang berubah, maupun kebutuhan pasar kerja Indonesia. Catatan yang sama ditampilkan di akhir keluaran program.
 
 ## 7. Penggunaan alat bantu AI
 - Saya memakai Chatgpt untuk brainstorming mencari topik dan juga membantu mencari jurnal referensi.
+- Saya memakai Claude untuk membantu menyusun draf aturan dari kerangka aturan yang saya parafrasa, dan membantu membuatkan referensi kode untuk metode forward chainingnya seperti apa
